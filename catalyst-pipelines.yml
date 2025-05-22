@@ -1,0 +1,20 @@
+version: 1.0
+jobs:
+  hello:
+    steps:
+      - echo "Hello"
+  world:
+    steps:
+      - echo "World"
+  hello-world:
+    steps:
+      - echo "Hello World!"
+      - npm i zcatalyst-cli@beta -g
+      - catalyst -v
+      - catalyst deploy
+stages:
+  - name: build
+    jobs:
+      - - hello
+        - world
+      - hello-world
