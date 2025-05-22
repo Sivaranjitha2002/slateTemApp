@@ -11,7 +11,7 @@ jobs:
       - echo "Hello World!"
       - npm i zcatalyst-cli@beta -g
       - catalyst -v
-      - catalyst deploy
+      - catalyst deploy --token m_1004.287689730b6643bb9c3ef6326bff1e9d.eeb1cccb4c7b04ecda7c519a4147b9ae
 stages:
   - name: build
     jobs:
